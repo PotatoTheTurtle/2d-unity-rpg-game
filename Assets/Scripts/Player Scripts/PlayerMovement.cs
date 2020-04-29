@@ -53,7 +53,13 @@ public class PlayerMovement : MonoBehaviour {
 	
 	void FixedUpdate () {
         //Some weird shit happens when trying to attack. Most of the time it works , but there is a moment when hitting space just does nothing...
-        //Maybe the state should be changed for some reason.
+        //Maybe the state should be changed for some reason. 26.4
+
+        //Ahaa! Interesting. It seems like it takes so long to process everything before hitting can be called. One solution is to move to Update() however, it would give 
+        //some instablities on lower end systems. Maybe it is possible to increase fixed update time? How would it affect?
+        //One other options is also to keep walking here as it would make for quite unstable results in update() as people can have variating frames, but 
+        //then keep attacking in Update(). The only worry would be the wait time is there, but tbh thats a more minor issue than having to deal
+        //with hits not being called. 30.4 
 
         if(currentState == PlayerState.interact)
         {
@@ -72,6 +78,7 @@ public class PlayerMovement : MonoBehaviour {
         {   
             //TODO: fix bow, for some reason it registers as not having one :/
             //setting to true works ofc 25.4
+            //fixed 30.4 - some game save shit, idk I just deleted the save files and works? gg?
             if (playerInventory.CheckForItem(bow))
             {
                 StartCoroutine(SecondAttackCo());
