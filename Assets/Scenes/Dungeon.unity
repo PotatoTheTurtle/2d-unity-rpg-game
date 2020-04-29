@@ -171,10 +171,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 10.954463, y: 35.45819}
+    - - {x: 10.696924, y: 35.517624}
       - {x: -10.027929, y: 35.411587}
       - {x: -10.059172, y: 6}
-      - {x: 10.82017, y: 6.0447636}
+      - {x: 10.641872, y: 5.96552}
 --- !u!4 &88487082
 Transform:
   m_ObjectHideFlags: 0
@@ -7445,7 +7445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5476005f03f48f38944f220c7f77fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 546363066}
   smoothing: 0.5
   maxPosition: {x: 0, y: 0}
   minPosition: {x: 0, y: 0}
@@ -7545,8 +7545,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 24, y: 18}
-      - {x: 11.00451, y: 17.790998}
-      - {x: 10.933532, y: 6.001189}
+      - {x: 13.672717, y: 17.907007}
+      - {x: 13.71775, y: 6.001189}
       - {x: 24, y: 6}
 --- !u!4 &852953539
 Transform:
@@ -21889,7 +21889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2069025828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22162,6 +22162,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114895083807742318, guid: e8d6a34590c5842c7ab32fb8bd99784a,
+        type: 3}
+      propertyPath: fadeWait
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895083807742318, guid: e8d6a34590c5842c7ab32fb8bd99784a,
+        type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 1333929345843426, guid: 6c17b01087166e341abcbfa605ce2291,
+        type: 3}
     - target: {fileID: 224105772413562928, guid: e8d6a34590c5842c7ab32fb8bd99784a,
         type: 3}
       propertyPath: m_AnchoredPosition.x

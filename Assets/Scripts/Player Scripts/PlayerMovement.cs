@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public enum PlayerState{
     walk,
@@ -42,10 +41,6 @@ public class PlayerMovement : MonoBehaviour {
     [Header("Projectile Stuff")]
     public GameObject projectile;
     public Item bow;
-
-    [Header("Respawn")]
-    public float fadeWait;
-    public GameObject panel;
 
     void Start () {
         currentState = PlayerState.walk;
@@ -189,25 +184,6 @@ public class PlayerMovement : MonoBehaviour {
         {
             playerHit.Raise();
             StartCoroutine(KnockCo(knockTime));
-        }else{
-            Debug.Log("YOU HAVE DIED");
-            currentHealth.RuntimeValue = 6f;
-            StartCoroutine(FadeCo());
-        }
-    }
-
-    public IEnumerator FadeCo()
-    {
-        if (panel != null)
-        {
-            Instantiate(panel, Vector3.zero, Quaternion.identity);
-        }
-        yield return new WaitForSeconds(fadeWait);
-        //ResetCameraBounds();
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("SampleScene");
-        while (!asyncOperation.isDone)
-        {
-            yield return null;
         }
     }
 

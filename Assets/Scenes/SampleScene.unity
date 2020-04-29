@@ -139,6 +139,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 114895083807742318, guid: e8d6a34590c5842c7ab32fb8bd99784a,
+        type: 3}
+      propertyPath: fadeWait
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895083807742318, guid: e8d6a34590c5842c7ab32fb8bd99784a,
+        type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 1333929345843426, guid: 6c17b01087166e341abcbfa605ce2291,
+        type: 3}
     - target: {fileID: 224241432803307054, guid: e8d6a34590c5842c7ab32fb8bd99784a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -134564,10 +134575,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
         type: 3}
+      propertyPath: chests.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
+        type: 3}
       propertyPath: objects.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: 7affc9821a70aec42bdcf21687debe92,
         type: 2}
+    - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
+        type: 3}
+      propertyPath: ChestA
+      value: 
+      objectReference: {fileID: 11400000, guid: b4997c8927bac45f0afb7e049ce52115,
+        type: 2}
+    - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
+        type: 3}
+      propertyPath: chests.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b4997c8927bac45f0afb7e049ce52115,
+        type: 2}
+    - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
+        type: 3}
+      propertyPath: chests.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7591ac892288e411da0db336709530b9,
+        type: 2}
+    - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
+        type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 1333929345843426, guid: 6c63bff531aabea41b60f2908c31fa63,
+        type: 3}
+    - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
+        type: 3}
+      propertyPath: fadeWait
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
+        type: 3}
+      propertyPath: pausepanel
+      value: 
+      objectReference: {fileID: 2101988115}
     - target: {fileID: 7762916451396610290, guid: 5f0f94deca3ea478fb709d3883897260,
         type: 3}
       propertyPath: m_LocalPosition.x

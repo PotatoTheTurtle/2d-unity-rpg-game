@@ -42,7 +42,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: ea07022d532de4c96860cbac1793550f, type: 3}
-    totalSpriteSurfaceArea: 2927120
+    totalSpriteSurfaceArea: 2928720
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -77,6 +77,7 @@ SpriteAtlas:
   - {fileID: 21300030, guid: aa17c5d04d5b0784c9180301c822c481, type: 3}
   - {fileID: 21300032, guid: aa17c5d04d5b0784c9180301c822c481, type: 3}
   - {fileID: 21300034, guid: aa17c5d04d5b0784c9180301c822c481, type: 3}
+  - {fileID: 21300000, guid: 9e8d1fe0299a82641a055f623fa8efa4, type: 3}
   - {fileID: 21300030, guid: f2c2a4210c76f42ab920eac77df187a6, type: 3}
   - {fileID: 21300028, guid: f2c2a4210c76f42ab920eac77df187a6, type: 3}
   - {fileID: 21300026, guid: f2c2a4210c76f42ab920eac77df187a6, type: 3}
@@ -5171,6 +5172,7 @@ SpriteAtlas:
   - Mini Golem Sprite Sheet_15
   - Mini Golem Sprite Sheet_16
   - Mini Golem Sprite Sheet_17
+  - fireball
   - modified gfx melee sprites_15
   - modified gfx melee sprites_14
   - modified gfx melee sprites_13

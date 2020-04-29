@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HeartManager : MonoBehaviour {
 
@@ -12,10 +13,34 @@ public class HeartManager : MonoBehaviour {
     public FloatValue heartContainers;
     public FloatValue playerCurrentHealth;
 
-	// Use this for initialization
-	void Start () {
+    [Header("Respawn")]
+    public float fadeWait;
+    public GameObject panel;
+
+    private void FixedUpdate()
+    {
         UpdateHearts();
-	}
+        if (playerCurrentHealth.RuntimeValue <= 0f) {
+            Debug.Log("YOU HAVE DIED");
+            playerCurrentHealth.RuntimeValue = 8f;
+            StartCoroutine(FadeCo());
+        }
+    }
+
+    public IEnumerator FadeCo()
+    {
+        if (panel != null)
+        {
+            Instantiate(panel, Vector3.zero, Quaternion.identity);
+        }
+        yield return new WaitForSeconds(fadeWait);
+        //ResetCameraBounds();
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("SampleScene");
+        while (!asyncOperation.isDone)
+        {
+            yield return null;
+        }
+    }
 
     public void InitHearts()
     {

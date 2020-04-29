@@ -9,7 +9,10 @@ public class HealthReaction : MonoBehaviour
 
     public void Use(int amountToIncrease)
     {
-        playerHealth.RuntimeValue += amountToIncrease;
-        healthSignal.Raise();
+        if (playerHealth.RuntimeValue < 6f)
+        {
+            playerHealth.RuntimeValue += amountToIncrease;
+            healthSignal.Raise();
+        }
     }
 }

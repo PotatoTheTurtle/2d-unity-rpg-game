@@ -2,12 +2,23 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameSaveManager : MonoBehaviour
 {
 
+    public GameObject pausepanel;
+
+    [Header("Objects to save/delete")]
     public List<ScriptableObject> objects = new List<ScriptableObject>();
+
+    [Header("Reset chest runtime values")]
+    public List<BoolValue> chests = new List<BoolValue>();
+
+    [Header("Reset wait screen")]
+    public float fadeWait;
+    public GameObject panel;
 
     public void ResetScriptables()
     {
@@ -22,6 +33,28 @@ public class GameSaveManager : MonoBehaviour
                 Debug.Log("DELETE");
                 Debug.Log(Application.persistentDataPath);
             }
+        }
+
+        for (int i = 0; i < chests.Count; i++)
+        {
+            chests[i].RuntimeValue = false;
+        }
+        pausepanel.SetActive(false);
+        Time.timeScale = 1f;
+        StartCoroutine(FadeCo());
+    }
+
+    public IEnumerator FadeCo()
+    {
+        if (panel != null)
+        {
+            Instantiate(panel, Vector3.zero, Quaternion.identity);
+        }
+        yield return new WaitForSeconds(fadeWait);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("SampleScene");
+        while (!asyncOperation.isDone)
+        {
+            yield return null;
         }
     }
 
