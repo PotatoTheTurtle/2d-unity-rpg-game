@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 212567282897912150}
   - component: {fileID: 61415251221326582}
   - component: {fileID: 61946558638830120}
+  - component: {fileID: 114390136236600008}
   m_Layer: 0
   m_Name: sign
   m_TagString: Untagged
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 60751345
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300222, guid: 275c0a091801c4f3cbf7d43ef7702e68, type: 3}
+  m_Sprite: {fileID: 21300036, guid: f7639b4a7288fe742a7302bbc915e2ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,3 +134,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.297123}
   m_EdgeRadius: 0
+--- !u!114 &114390136236600008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261654087518494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e00b14e11b849d2a3ea1ef51681a3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 11400000, guid: 45ee6e0e9d72647d7950db59dd6dc5f9, type: 2}
+  playerInRange: 0
+  dialogBox: {fileID: 0}
+  dialogText: {fileID: 0}
+  dialog: 

@@ -50,8 +50,32 @@ public class PlayerMovement : MonoBehaviour {
         animator.SetFloat("moveY", -1);
         transform.position = startingPosition.initialValue;
 	}
-	
-	void FixedUpdate () {
+
+    void Update()
+    {
+        if (currentState == PlayerState.interact)
+        {
+            return;
+        }
+        if (Input.GetButtonDown("attack") && currentState != PlayerState.attack
+        && currentState != PlayerState.stagger)
+        {
+            StartCoroutine(AttackCo());
+        }
+        else if (Input.GetButtonDown("Second Weapon") && currentState != PlayerState.attack
+            && currentState != PlayerState.stagger)
+        {
+            //TODO: fix bow, for some reason it registers as not having one :/
+            //setting to true works ofc 25.4
+            //fixed 30.4 - some game save shit, idk I just deleted the save files and works? gg?
+            if (playerInventory.CheckForItem(bow))
+            {
+                StartCoroutine(SecondAttackCo());
+            }
+        }
+    }
+
+    void FixedUpdate () {
         //Some weird shit happens when trying to attack. Most of the time it works , but there is a moment when hitting space just does nothing...
         //Maybe the state should be changed for some reason. 26.4
 
@@ -68,23 +92,7 @@ public class PlayerMovement : MonoBehaviour {
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
-        if(Input.GetButtonDown("attack") && currentState != PlayerState.attack 
-           && currentState != PlayerState.stagger)
-        {
-            StartCoroutine(AttackCo());
-        }
-        else if (Input.GetButtonDown("Second Weapon") && currentState != PlayerState.attack
-           && currentState != PlayerState.stagger)
-        {   
-            //TODO: fix bow, for some reason it registers as not having one :/
-            //setting to true works ofc 25.4
-            //fixed 30.4 - some game save shit, idk I just deleted the save files and works? gg?
-            if (playerInventory.CheckForItem(bow))
-            {
-                StartCoroutine(SecondAttackCo());
-            }
-        }
-        else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
+        if (currentState == PlayerState.walk || currentState == PlayerState.idle)
         {
             UpdateAnimationAndMove();
         }

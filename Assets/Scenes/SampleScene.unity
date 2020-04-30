@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1648821336539234, guid: e8d6a34590c5842c7ab32fb8bd99784a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1887422746166464, guid: e8d6a34590c5842c7ab32fb8bd99784a, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1081,6 +1085,78 @@ Transform:
   m_Father: {fileID: 1706977462}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &283146928
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 475503488}
+    m_Modifications:
+    - target: {fileID: 1261654087518494, guid: 1d01b6c9916cb49f88e7ddfacc2576a1, type: 3}
+      propertyPath: m_Name
+      value: sign
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268531771947384, guid: 1d01b6c9916cb49f88e7ddfacc2576a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268531771947384, guid: 1d01b6c9916cb49f88e7ddfacc2576a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -15.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268531771947384, guid: 1d01b6c9916cb49f88e7ddfacc2576a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268531771947384, guid: 1d01b6c9916cb49f88e7ddfacc2576a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268531771947384, guid: 1d01b6c9916cb49f88e7ddfacc2576a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268531771947384, guid: 1d01b6c9916cb49f88e7ddfacc2576a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268531771947384, guid: 1d01b6c9916cb49f88e7ddfacc2576a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268531771947384, guid: 1d01b6c9916cb49f88e7ddfacc2576a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268531771947384, guid: 1d01b6c9916cb49f88e7ddfacc2576a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268531771947384, guid: 1d01b6c9916cb49f88e7ddfacc2576a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268531771947384, guid: 1d01b6c9916cb49f88e7ddfacc2576a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114390136236600008, guid: 1d01b6c9916cb49f88e7ddfacc2576a1,
+        type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1412364991}
+    - target: {fileID: 114390136236600008, guid: 1d01b6c9916cb49f88e7ddfacc2576a1,
+        type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 1966832337}
+    - target: {fileID: 114390136236600008, guid: 1d01b6c9916cb49f88e7ddfacc2576a1,
+        type: 3}
+      propertyPath: dialog
+      value: Castle should be near somewhere. Hopefully the stone wall is gone now...
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d01b6c9916cb49f88e7ddfacc2576a1, type: 3}
 --- !u!1 &328265033
 GameObject:
   m_ObjectHideFlags: 0
@@ -133564,6 +133640,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114390136236600008, guid: 1d01b6c9916cb49f88e7ddfacc2576a1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114390136236600008, guid: 1d01b6c9916cb49f88e7ddfacc2576a1,
+        type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 212567282897912150, guid: 1d01b6c9916cb49f88e7ddfacc2576a1,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -133574,7 +133660,8 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114390136236600008, guid: 1d01b6c9916cb49f88e7ddfacc2576a1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d01b6c9916cb49f88e7ddfacc2576a1, type: 3}
 --- !u!1 &752167945325077735
 GameObject:
