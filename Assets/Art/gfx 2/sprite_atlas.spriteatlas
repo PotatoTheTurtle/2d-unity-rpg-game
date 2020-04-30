@@ -42,7 +42,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: ea07022d532de4c96860cbac1793550f, type: 3}
-    totalSpriteSurfaceArea: 2928720
+    totalSpriteSurfaceArea: 2933620
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -5063,6 +5063,7 @@ SpriteAtlas:
   - {fileID: 21300734, guid: f7639b4a7288fe742a7302bbc915e2ae, type: 3}
   - {fileID: 21300000, guid: d97cb55a4ef4d42f582719e007547bec, type: 3}
   - {fileID: 21300000, guid: 5978c6ead12ce4310b332843ee002cbe, type: 3}
+  - {fileID: 21300000, guid: ebb2764b47c5e574a96ac72ef2ab40c9, type: 3}
   - {fileID: 21300000, guid: a33f879b09c9857408ee79881c1ba757, type: 3}
   - {fileID: 21300016, guid: 9df678dbec5f64ddd8011fc2e4fb1003, type: 3}
   - {fileID: 21300018, guid: 9df678dbec5f64ddd8011fc2e4fb1003, type: 3}
@@ -10158,6 +10159,7 @@ SpriteAtlas:
   - outside_367
   - mask
   - Square
+  - wand
   - Green Bottle Potion
   - log_8
   - log_9

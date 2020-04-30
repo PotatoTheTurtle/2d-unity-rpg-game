@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d355a2ca2d74b7fa706e0a41b70a79, type: 3}
   m_Name: Bow
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: f1f64786cab1a4dcbbdff809af6234cd, type: 3}
-  itemDescription: It's a Bow!
+  itemSprite: {fileID: 21300000, guid: ebb2764b47c5e574a96ac72ef2ab40c9, type: 3}
+  itemDescription: Its a fireball wand!
   isKey: 0

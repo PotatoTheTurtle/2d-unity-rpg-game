@@ -15,7 +15,7 @@ public class Inventory : ScriptableObject {
 
     public void OnEnable()
     {
-        currentMagic = maxMagic;
+        //currentMagic = maxMagic;
     }
 
     public void ReduceMagic(float magicCost)

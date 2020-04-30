@@ -21,7 +21,7 @@ public class HeartManager : MonoBehaviour {
     {
         UpdateHearts();
         if (playerCurrentHealth.RuntimeValue <= 0f) {
-            Debug.Log("YOU HAVE DIED");
+ 
             playerCurrentHealth.RuntimeValue = 8f;
             StartCoroutine(FadeCo());
         }
@@ -44,7 +44,6 @@ public class HeartManager : MonoBehaviour {
 
     public void InitHearts()
     {
-        Debug.Log("INIT HEARTS");
         for (int i = 0; i < heartContainers.RuntimeValue; i ++)
         {
             if (i < hearts.Length)
@@ -58,10 +57,8 @@ public class HeartManager : MonoBehaviour {
     public void UpdateHearts()
     {
         InitHearts();
-        Debug.Log("INIT HEARTS 2");
        
         float tempHealth = playerCurrentHealth.RuntimeValue / 2;
-        Debug.Log(tempHealth);
         for (int i = 0; i < heartContainers.RuntimeValue; i ++)
         {
             if(i <= tempHealth-1)

@@ -330,6 +330,9 @@
     <Reference Include="DOTweenEditor">
       <HintPath>D:/unityprojects/Finding-the-grandfather/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
     </Reference>
+    <Reference Include="UERP">
+      <HintPath>D:/unityprojects/Finding-the-grandfather/Assets/Editor/UERP/Plugins/UERP.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>D:/unityprojects/Finding-the-grandfather/Library/PackageCache/com.unity.ads@2.3.1/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
@@ -350,9 +353,6 @@
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>D:/unityprojects/Finding-the-grandfather/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="UERP">
-      <HintPath>D:/unityprojects/Finding-the-grandfather/Assets/Editor/UERP/Plugins/UERP.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/UnityEditor/2018.4.19f1/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/mscorlib.dll</HintPath>
