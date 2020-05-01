@@ -10,6 +10,7 @@ public class InventorySaver : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log("INVENTORYSAVER.CS ENABLED");
         myInventory.myInventory.Clear();
         LoadScriptables();
     }
@@ -21,6 +22,7 @@ public class InventorySaver : MonoBehaviour
 
     public void ResetScriptables()
     {
+        myInventory.myInventory.Clear();
         int i = 0;
         while (File.Exists(Application.persistentDataPath +
             string.Format("/{0}.inv", i)))
@@ -34,13 +36,13 @@ public class InventorySaver : MonoBehaviour
 
     public void SaveScriptables()
     {
-        ResetScriptables();
         for (int i = 0; i < myInventory.myInventory.Count; i++)
         {
             FileStream file = File.Create(Application.persistentDataPath +
                 string.Format("/{0}.inv", i));
             BinaryFormatter binary = new BinaryFormatter();
             var json = JsonUtility.ToJson(myInventory.myInventory[i]);
+            Debug.Log(json);
             binary.Serialize(file, json);
             file.Close();
         }
@@ -53,12 +55,17 @@ public class InventorySaver : MonoBehaviour
             string.Format("/{0}.inv", i)))
         {
             var temp = ScriptableObject.CreateInstance<InventoryItem>();
+
             FileStream file = File.Open(Application.persistentDataPath +
                 string.Format("/{0}.inv", i), FileMode.Open);
+
             BinaryFormatter binary = new BinaryFormatter();
+
             JsonUtility.FromJsonOverwrite((string)binary.Deserialize(file),
                 temp);
+
             file.Close();
+            Debug.Log(JsonUtility.ToJson(temp));
             myInventory.myInventory.Add(temp);
             i++;
         }

@@ -10,8 +10,13 @@ public class MagicManager : MonoBehaviour
     public Inventory playerInventory;
     void Start()
     {
-        magicSlider.maxValue = playerInventory.maxMagic;
+        magicSlider.maxValue = playerInventory.maxMagic + playerInventory.bonusmagic;
         magicSlider.value = playerInventory.currentMagic;
+    }
+
+    private void FixedUpdate() //Stupid way to do this, but will work as a workaround for now.
+    {
+        magicSlider.maxValue = playerInventory.maxMagic;
     }
 
     public void AddMagic()

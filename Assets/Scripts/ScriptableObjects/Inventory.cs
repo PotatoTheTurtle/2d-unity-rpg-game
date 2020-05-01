@@ -44,10 +44,13 @@ public class Inventory : ScriptableObject {
         else if (itemToAdd.id == 1)
         {
             //Magic increase
+            bonusmagic =+ 5;
+            maxMagic += bonusmagic;
         }
         else if (itemToAdd.id == 3)
         {
             //Sword damage
+            bonusdamage += 1;
         }
         else
         {

@@ -34,8 +34,8 @@ public class HeartManager : MonoBehaviour {
             Instantiate(panel, Vector3.zero, Quaternion.identity);
         }
         yield return new WaitForSeconds(fadeWait);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         //ResetCameraBounds();
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("SampleScene");
         while (!asyncOperation.isDone)
         {
             yield return null;

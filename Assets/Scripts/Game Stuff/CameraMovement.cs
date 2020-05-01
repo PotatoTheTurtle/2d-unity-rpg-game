@@ -63,7 +63,6 @@ public class CameraMovement : MonoBehaviour {
 
     public void BeginKick()
     {
-        Debug.Log("Kick");
         anim.SetBool("kick_active", true);
         StartCoroutine(KickCo());
     }

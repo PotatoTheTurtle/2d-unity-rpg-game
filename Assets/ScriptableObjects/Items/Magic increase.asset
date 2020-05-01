@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Magic increase
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: ebb2764b47c5e574a96ac72ef2ab40c9, type: 3}
+  id: 1
   itemDescription: This should increase my magic by 5. I should use some magic potions
     to refill my magic.
   isKey: 0

@@ -61,6 +61,7 @@ public class GameSaveManager : MonoBehaviour
     private void OnEnable()
     {
         LoadScriptables();
+        Debug.Log(Application.persistentDataPath);
     }
 
     private void OnDisable()
