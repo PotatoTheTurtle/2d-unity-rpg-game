@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  items: []
-  numberOfKeys: 101
+  items:
+  - {fileID: 11400000, guid: 6ae3881435cfd451fa85ea829a3dd36d, type: 2}
+  numberOfKeys: 100
   coins: 0
   maxMagic: 10
-  currentMagic: 10
+  currentMagic: 0

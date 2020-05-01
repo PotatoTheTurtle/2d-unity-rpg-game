@@ -36,11 +36,9 @@ public class TreasureChest : Interactable {
         {   
             if(!isOpen)
             {
-                // Open the chest
                 OpenChest();
             }else
             {
-                // Chest is already open
                 ChestAlreadyOpen();
             }
         }

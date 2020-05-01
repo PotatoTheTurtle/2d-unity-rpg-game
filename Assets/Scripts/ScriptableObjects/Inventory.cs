@@ -11,6 +11,8 @@ public class Inventory : ScriptableObject {
     public int numberOfKeys;
     public int coins;
     public float maxMagic = 10;
+    public float bonusdamage;
+    public float bonusmagic;
     public float currentMagic;
 
     public void OnEnable()
@@ -38,6 +40,14 @@ public class Inventory : ScriptableObject {
         if(itemToAdd.isKey)
         {
             numberOfKeys++;
+        }
+        else if (itemToAdd.id == 1)
+        {
+            //Magic increase
+        }
+        else if (itemToAdd.id == 3)
+        {
+            //Sword damage
         }
         else
         {

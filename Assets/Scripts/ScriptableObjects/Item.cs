@@ -7,6 +7,7 @@ using UnityEngine;
 public class Item : ScriptableObject  {
 
     public Sprite itemSprite;
+    public int id;
     public string itemDescription;
     public bool isKey;
 
