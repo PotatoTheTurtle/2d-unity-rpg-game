@@ -7,6 +7,7 @@ using UnityEngine;
 public class InventorySaver : MonoBehaviour
 {
     [SerializeField] private PlayerInventory myInventory;
+    [SerializeField] private ScriptableObject myInventoryObject;
 
     private void OnEnable()
     {
@@ -36,21 +37,42 @@ public class InventorySaver : MonoBehaviour
 
     public void SaveScriptables()
     {
-        for (int i = 0; i < myInventory.myInventory.Count; i++)
+        FileStream file = File.Create(Application.persistentDataPath + "/inventory.inv");
+        BinaryFormatter binary = new BinaryFormatter();
+        var json = JsonUtility.ToJson(myInventoryObject);
+        Debug.Log(myInventoryObject);
+        binary.Serialize(file, json);
+        file.Close();
+
+        /*for (int i = 0; i < myInventory.myInventory.Count; i++)
         {
             FileStream file = File.Create(Application.persistentDataPath +
                 string.Format("/{0}.inv", i));
             BinaryFormatter binary = new BinaryFormatter();
             var json = JsonUtility.ToJson(myInventory.myInventory[i]);
-            Debug.Log(json);
+            Debug.Log(myInventory.myInventory[i]);
             binary.Serialize(file, json);
             file.Close();
-        }
+        }*/
     }
 
     public void LoadScriptables()
     {
-        int i = 0;
+
+        if (File.Exists(Application.persistentDataPath + "/inventory.inv"))
+        {
+            FileStream file = File.Open(Application.persistentDataPath + "/inventory.inv", FileMode.Open);
+            BinaryFormatter binary = new BinaryFormatter();
+            JsonUtility.FromJsonOverwrite((string)binary.Deserialize(file),
+                myInventoryObject);
+            file.Close();
+        }
+        else
+        {
+            myInventory.myInventory.Clear();
+        }
+
+        /*int i = 0;
         while (File.Exists(Application.persistentDataPath +
             string.Format("/{0}.inv", i)))
         {
@@ -68,7 +90,7 @@ public class InventorySaver : MonoBehaviour
             Debug.Log(JsonUtility.ToJson(temp));
             myInventory.myInventory.Add(temp);
             i++;
-        }
+        }*/
 
     }
 }
