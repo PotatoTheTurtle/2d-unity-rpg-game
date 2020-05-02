@@ -9,9 +9,11 @@ public class InventorySaver : MonoBehaviour
     [SerializeField] private PlayerInventory myInventory;
     [SerializeField] private ScriptableObject myInventoryObject;
 
+    [Header("Reset potion amount")]
+    public List<InventoryItem> potions = new List<InventoryItem>();
+
     private void OnEnable()
     {
-        Debug.Log("INVENTORYSAVER.CS ENABLED");
         myInventory.myInventory.Clear();
         LoadScriptables();
     }
@@ -24,15 +26,16 @@ public class InventorySaver : MonoBehaviour
     public void ResetScriptables()
     {
         myInventory.myInventory.Clear();
-        int i = 0;
-        while (File.Exists(Application.persistentDataPath +
-            string.Format("/{0}.inv", i)))
+
+        for(int i = 0; i < potions.Count; i++)
         {
-            File.Delete(Application.persistentDataPath +
-                string.Format("/{0}.inv", i));
-            i++;
+            potions[i].numberHeld = 0;
         }
-        
+
+        if(File.Exists(Application.persistentDataPath + "/inventory.inv"))
+        {
+            File.Delete(Application.persistentDataPath + "/invenotry.inv");
+        }
     }
 
     public void SaveScriptables()
@@ -43,17 +46,6 @@ public class InventorySaver : MonoBehaviour
         Debug.Log(myInventoryObject);
         binary.Serialize(file, json);
         file.Close();
-
-        /*for (int i = 0; i < myInventory.myInventory.Count; i++)
-        {
-            FileStream file = File.Create(Application.persistentDataPath +
-                string.Format("/{0}.inv", i));
-            BinaryFormatter binary = new BinaryFormatter();
-            var json = JsonUtility.ToJson(myInventory.myInventory[i]);
-            Debug.Log(myInventory.myInventory[i]);
-            binary.Serialize(file, json);
-            file.Close();
-        }*/
     }
 
     public void LoadScriptables()
@@ -71,26 +63,5 @@ public class InventorySaver : MonoBehaviour
         {
             myInventory.myInventory.Clear();
         }
-
-        /*int i = 0;
-        while (File.Exists(Application.persistentDataPath +
-            string.Format("/{0}.inv", i)))
-        {
-            var temp = ScriptableObject.CreateInstance<InventoryItem>();
-
-            FileStream file = File.Open(Application.persistentDataPath +
-                string.Format("/{0}.inv", i), FileMode.Open);
-
-            BinaryFormatter binary = new BinaryFormatter();
-
-            JsonUtility.FromJsonOverwrite((string)binary.Deserialize(file),
-                temp);
-
-            file.Close();
-            Debug.Log(JsonUtility.ToJson(temp));
-            myInventory.myInventory.Add(temp);
-            i++;
-        }*/
-
     }
 }

@@ -7915,7 +7915,7 @@ PrefabInstance:
     - target: {fileID: 7762916451396610288, guid: 5f0f94deca3ea478fb709d3883897260,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
         type: 3}
@@ -27191,6 +27191,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myInventory: {fileID: 11400000, guid: 8ee233d64bb736c48ab2feabb981a2e1, type: 2}
+  myInventoryObject: {fileID: 11400000, guid: 8ee233d64bb736c48ab2feabb981a2e1, type: 2}
+  potions:
+  - {fileID: 11400000, guid: 60c62eab45def9f46b8c65c817a10321, type: 2}
+  - {fileID: 11400000, guid: 20950de7fb778544886c9a0a440e303a, type: 2}
 --- !u!1001 &2053998893
 PrefabInstance:
   m_ObjectHideFlags: 0
