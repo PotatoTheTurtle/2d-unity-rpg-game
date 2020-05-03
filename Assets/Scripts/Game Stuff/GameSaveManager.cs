@@ -20,6 +20,10 @@ public class GameSaveManager : MonoBehaviour
     public float fadeWait;
     public GameObject panel;
 
+    [Header("Reset wait screen")]
+    public ScriptableObject playerInventory;
+    public Inventory inventory;
+
     public void ResetScriptables()
     {
         Debug.Log(Application.persistentDataPath);
@@ -35,10 +39,26 @@ public class GameSaveManager : MonoBehaviour
             }
         }
 
+        if (File.Exists(Application.persistentDataPath + "/generalinventory.dat"))
+        {
+            File.Delete(Application.persistentDataPath + "/generalinventory.dat");
+        }
+
         for (int i = 0; i < chests.Count; i++)
         {
             chests[i].RuntimeValue = false;
         }
+
+        inventory.coins = 0;
+        inventory.bonusdamage = 0;
+        inventory.numberOfKeys = 1;
+        //inventory.items.Clear();
+
+        inventory.bonusmagic = 0;
+        inventory.maxMagic = 10;
+        inventory.currentMagic = 10;
+
+
         pausepanel.SetActive(false);
         Time.timeScale = 1f;
         StartCoroutine(FadeCo());
@@ -80,6 +100,12 @@ public class GameSaveManager : MonoBehaviour
             binary.Serialize(file, json);
             file.Close();
         }
+
+        FileStream generalinventoryfile = File.Create(Application.persistentDataPath + "/generalinventory.dat");
+        BinaryFormatter binaryinventory = new BinaryFormatter();
+        var jsoninventory = JsonUtility.ToJson(playerInventory);
+        binaryinventory.Serialize(generalinventoryfile, jsoninventory);
+        generalinventoryfile.Close();
     }
 
     public void LoadScriptables()
@@ -98,6 +124,21 @@ public class GameSaveManager : MonoBehaviour
             }
         }
 
+        if (File.Exists(Application.persistentDataPath + "/generalinventory.dat"))
+        {
+            Debug.Log("FILE EXISTS /generalinventory.dat");
+            FileStream generalinventoryfile = File.Open(Application.persistentDataPath + "/generalinventory.dat", FileMode.Open);
+            BinaryFormatter binaryinventory = new BinaryFormatter();
+            JsonUtility.FromJsonOverwrite((string)binaryinventory.Deserialize(generalinventoryfile), playerInventory);
+            generalinventoryfile.Close();
+        }
+        else
+        {
+            Debug.Log("COINS");
+            inventory.coins = 0;
+            inventory.bonusmagic = 0;
+            inventory.bonusdamage = 0;
+        }
     }
 
 }

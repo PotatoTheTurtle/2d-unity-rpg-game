@@ -133448,7 +133448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000018374192, y: -0.000004691902}
+  m_AnchoredPosition: {x: -0.000018374192, y: 0.000015890935}
   m_SizeDelta: {x: 0.000030518, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2030640950
@@ -135395,7 +135395,7 @@ PrefabInstance:
     - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
         type: 3}
       propertyPath: objects.Array.size
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
         type: 3}
@@ -135460,6 +135460,24 @@ PrefabInstance:
       propertyPath: objects.Array.data[6]
       value: 
       objectReference: {fileID: 11400000, guid: 570e00f8c66dbba4c981c99b056c9706,
+        type: 2}
+    - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
+        type: 3}
+      propertyPath: objects.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 570e00f8c66dbba4c981c99b056c9706,
+        type: 2}
+    - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
+        type: 3}
+      propertyPath: playerInventory
+      value: 
+      objectReference: {fileID: 11400000, guid: 52eb4439f1fb44f2e9f890fb55ae3d91,
+        type: 2}
+    - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: 52eb4439f1fb44f2e9f890fb55ae3d91,
         type: 2}
     - target: {fileID: 7762916451396610290, guid: 5f0f94deca3ea478fb709d3883897260,
         type: 3}
