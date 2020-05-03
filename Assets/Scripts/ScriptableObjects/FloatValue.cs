@@ -6,7 +6,6 @@ using UnityEngine;
 [System.Serializable]
 public class FloatValue : ScriptableObject 
 {
-
     public float initialValue;
 
 

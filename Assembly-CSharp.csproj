@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\Game Stuff\PauseManager.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\Room.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\TimelineManager.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\VolumeManager.cs" />
     <Compile Include="Assets\Scripts\Inventory\HealthReaction.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryItem.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />

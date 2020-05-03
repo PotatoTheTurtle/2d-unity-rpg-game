@@ -132,13 +132,6 @@ public class GameSaveManager : MonoBehaviour
             JsonUtility.FromJsonOverwrite((string)binaryinventory.Deserialize(generalinventoryfile), playerInventory);
             generalinventoryfile.Close();
         }
-        else
-        {
-            Debug.Log("COINS");
-            inventory.coins = 0;
-            inventory.bonusmagic = 0;
-            inventory.bonusdamage = 0;
-        }
     }
 
 }
