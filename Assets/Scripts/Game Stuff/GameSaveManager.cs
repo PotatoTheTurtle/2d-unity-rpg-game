@@ -24,6 +24,7 @@ public class GameSaveManager : MonoBehaviour
     public ScriptableObject playerInventory;
     public Inventory inventory;
     public FloatValue hearts;
+    public VectorValue playerPosition;
 
     public void ResetScriptables()
     {
@@ -75,6 +76,10 @@ public class GameSaveManager : MonoBehaviour
             Instantiate(panel, Vector3.zero, Quaternion.identity);
         }
         yield return new WaitForSeconds(fadeWait);
+        if (SceneManager.GetActiveScene().name == "SampleScene")
+        {
+            playerPosition.initialValue = playerPosition.defaultValue;
+        }
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         while (!asyncOperation.isDone)
         {

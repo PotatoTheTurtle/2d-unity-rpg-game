@@ -143,7 +143,7 @@ e0ee4b3d4e27318934cc940a969d3d96 UnityEngine.Networking.dll:UnityEngine.Networki
 ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-65d99c18511576997fcc76c9fd44ae10 Assembly-CSharp.dll:.HeartManager
+1c7d907aa5c2f43510e2446701e6f179 Assembly-CSharp.dll:.HeartManager
 fb70f07c52fc0817edd54327b41ca12c Cinemachine.dll:Cinemachine.CinemachineFreeLook
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 4b1bdb0f61db2d6463337f96c49ce060 Assembly-CSharp.dll:.InventorySlot
@@ -267,7 +267,7 @@ bc0eaa8901a57d8e48f26906da1ebeba Assembly-CSharp.dll:.MeleeEnemy
 df434544c9f7b33d1cc7e635b180d279 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3b31aa5115bd3866f2b6a1f4b64234d5 Assembly-CSharp.dll:.TurretEnemy
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
-19221986ad44320a7c97a1c286618457 Assembly-CSharp.dll:.GameSaveManager
+29ca52bf478de0e3fb45816b5dce67f5 Assembly-CSharp.dll:.GameSaveManager
 9f1eb6f321d18cff833aa9f25063ce94 Assembly-CSharp.dll:.Signal
 26dfd12c376ccb5a430bef224c0ec90a Assembly-CSharp.dll:.HealthReaction
 b528e5448dd9a2bbb09520e1986af5ae Assembly-CSharp.dll:.TreasureChest
