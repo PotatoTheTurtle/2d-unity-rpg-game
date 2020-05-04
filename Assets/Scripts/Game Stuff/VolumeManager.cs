@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class VolumeManager : MonoBehaviour
 {
     public FloatValue volumeValue;
+    public Slider slider;
 
     void Start()
     {
-        
+        slider.value = volumeValue.RuntimeValue;
     }
 
     public void SetVolume(Slider newValue)

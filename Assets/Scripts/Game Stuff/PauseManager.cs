@@ -9,6 +9,7 @@ public class PauseManager : MonoBehaviour
     private bool isPaused;
     public GameObject pausePanel;
     public GameObject inventoryPanel;
+    public GameObject optionsPanel;
     public bool usingPausePanel;
     public string mainMenu;
 
@@ -44,6 +45,7 @@ public class PauseManager : MonoBehaviour
         {
             inventoryPanel.SetActive(false);
             pausePanel.SetActive(false);
+            optionsPanel.SetActive(false);
             Time.timeScale = 1f;
         }
     }
@@ -67,6 +69,18 @@ public class PauseManager : MonoBehaviour
             inventoryPanel.SetActive(true);
             pausePanel.SetActive(false);
         }
+    }
+
+    public void Options()
+    {
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(true);
+    }
+
+    public void BackOptions()
+    {
+        optionsPanel.SetActive(false);
+        pausePanel.SetActive(true);
     }
 
 }

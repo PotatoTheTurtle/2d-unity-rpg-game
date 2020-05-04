@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\Game Stuff\Knockback.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\MagicManager.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\MusicVolume.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\OverworldRoom.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\PauseManager.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\Room.cs" />

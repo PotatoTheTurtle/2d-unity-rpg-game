@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject settings;
+    public GameObject controls;
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +32,16 @@ public class MainMenu : MonoBehaviour
         mainMenu.SetActive(false);
     }
 
-    public void BackSettings()
+    public void Controls()
+    {
+        controls.SetActive(true);
+        mainMenu.SetActive(false);
+    }
+
+    public void Back()
     {
         settings.SetActive(false);
+        controls.SetActive(false);
         mainMenu.SetActive(true);
     }
 

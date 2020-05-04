@@ -42,7 +42,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: ea07022d532de4c96860cbac1793550f, type: 3}
-    totalSpriteSurfaceArea: 2933620
+    totalSpriteSurfaceArea: 3237532
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -849,6 +849,7 @@ SpriteAtlas:
   - {fileID: 21300340, guid: a7f196a65707eb34ba7376a7b89edb57, type: 3}
   - {fileID: 21300000, guid: b1f7aaa671bb47e43bcbb749ad2e1ebc, type: 3}
   - {fileID: 21300000, guid: bb6e90b684a454ec283febb1da03da9d, type: 3}
+  - {fileID: 21300000, guid: b550f217970095640a23369412922e33, type: 3}
   - {fileID: 21300576, guid: 45cfa0b74a13da3438f744e9590fc545, type: 3}
   - {fileID: 21300584, guid: 45cfa0b74a13da3438f744e9590fc545, type: 3}
   - {fileID: 21300464, guid: 45cfa0b74a13da3438f744e9590fc545, type: 3}
@@ -5105,6 +5106,7 @@ SpriteAtlas:
   - {fileID: 21300018, guid: 021b09bc8caaa4f72a1a657148cac6cd, type: 3}
   - {fileID: 21300030, guid: 021b09bc8caaa4f72a1a657148cac6cd, type: 3}
   - {fileID: 21300028, guid: 021b09bc8caaa4f72a1a657148cac6cd, type: 3}
+  - {fileID: 21300000, guid: f7acf3ec67e14c746b8d51d8df91e9c1, type: 3}
   - {fileID: 21300000, guid: 0807b21d17e3a4806be0ab8aec39b4b5, type: 3}
   - {fileID: 21300020, guid: 5731c6cd4df974aef8337a5175e5fc58, type: 3}
   - {fileID: 21300022, guid: 5731c6cd4df974aef8337a5175e5fc58, type: 3}
@@ -5945,6 +5947,7 @@ SpriteAtlas:
   - castle_170
   - doors
   - door
+  - wasd
   - house_288
   - house_292
   - house_232
@@ -10201,6 +10204,7 @@ SpriteAtlas:
   - NPC_test_9
   - NPC_test_15
   - NPC_test_14
+  - doubledoor
   - font
   - orge_10
   - orge_11

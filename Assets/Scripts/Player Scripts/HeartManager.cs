@@ -12,6 +12,7 @@ public class HeartManager : MonoBehaviour {
     public Sprite emptyHeart;
     public FloatValue heartContainers;
     public FloatValue playerCurrentHealth;
+    public VectorValue playerPosition;
 
     [Header("Respawn")]
     public float fadeWait;
@@ -34,6 +35,10 @@ public class HeartManager : MonoBehaviour {
             Instantiate(panel, Vector3.zero, Quaternion.identity);
         }
         yield return new WaitForSeconds(fadeWait);
+        if(SceneManager.GetActiveScene().name == "SampleScene")
+        {
+            playerPosition.initialValue = playerPosition.defaultValue;
+        }
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         //ResetCameraBounds();
         while (!asyncOperation.isDone)

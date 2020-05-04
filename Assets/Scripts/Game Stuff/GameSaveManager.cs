@@ -20,9 +20,10 @@ public class GameSaveManager : MonoBehaviour
     public float fadeWait;
     public GameObject panel;
 
-    [Header("Reset wait screen")]
+    [Header("Reset player values")]
     public ScriptableObject playerInventory;
     public Inventory inventory;
+    public FloatValue hearts;
 
     public void ResetScriptables()
     {
@@ -51,12 +52,15 @@ public class GameSaveManager : MonoBehaviour
 
         inventory.coins = 0;
         inventory.bonusdamage = 0;
-        inventory.numberOfKeys = 1;
-        //inventory.items.Clear();
+        inventory.numberOfKeys = 0;
 
         inventory.bonusmagic = 0;
         inventory.maxMagic = 10;
         inventory.currentMagic = 10;
+
+        inventory.items.Clear();
+
+        hearts.RuntimeValue = 8;
 
 
         pausepanel.SetActive(false);
@@ -71,7 +75,7 @@ public class GameSaveManager : MonoBehaviour
             Instantiate(panel, Vector3.zero, Quaternion.identity);
         }
         yield return new WaitForSeconds(fadeWait);
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("SampleScene");
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         while (!asyncOperation.isDone)
         {
             yield return null;
@@ -109,7 +113,8 @@ public class GameSaveManager : MonoBehaviour
     }
 
     public void LoadScriptables()
-    { 
+    {
+        Debug.Log(Application.persistentDataPath);
         for(int i = 0; i < objects.Count; i ++)
         { 
             if(File.Exists(Application.persistentDataPath +
