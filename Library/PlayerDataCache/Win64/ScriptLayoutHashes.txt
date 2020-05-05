@@ -176,7 +176,7 @@ bd543bad7f9f6262f10595aadb130d22 Cinemachine.dll:Cinemachine.CinemachineComposer
 71bb6a6b6c8f052f948db64c7dd3ca4f Cinemachine.dll:Cinemachine.CinemachinePipeline
 704dcd31abc789439bc3f3cd10b58c2b DOTween.dll:DG.Tweening.Core.DOTweenComponent
 9a65634b0f2713c6c2d2dd4d09159a88 DOTween.dll:DG.Tweening.Core.DOTweenSettings
-3275cb2dc0521052dde1bacecedcdc7b Assembly-CSharp.dll:.Door
+73c147fa690fec90448cfeca6beddc45 Assembly-CSharp.dll:.Door
 7f571709c711860ef02318755b2a45fa Assembly-CSharp.dll:.Knockback
 1bf4ae589b0ba87aa35b13607e3c03a5 Assembly-CSharp.dll:.DungeonRoom
 694d20920c0e41f567e119f7159a3644 Cinemachine.dll:Cinemachine.CinemachinePath

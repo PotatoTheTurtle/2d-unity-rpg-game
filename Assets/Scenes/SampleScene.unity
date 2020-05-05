@@ -135202,8 +135202,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000018374192, y: -0.000009498989}
-  m_SizeDelta: {x: 0.000030518, y: 25}
+  m_AnchoredPosition: {x: -0.000018374192, y: -0.0000032180074}
+  m_SizeDelta: {x: 0.000030518, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2030640950
 MonoBehaviour:
@@ -135790,7 +135790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2114461697
 RectTransform:
   m_ObjectHideFlags: 0
@@ -137150,7 +137150,7 @@ PrefabInstance:
     - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
         type: 3}
       propertyPath: chests.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
         type: 3}
@@ -137250,6 +137250,18 @@ PrefabInstance:
       propertyPath: hearts
       value: 
       objectReference: {fileID: 11400000, guid: d2056c37fff324b6cb19ce1eff22f208,
+        type: 2}
+    - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
+        type: 3}
+      propertyPath: playerPosition
+      value: 
+      objectReference: {fileID: 11400000, guid: d5432d972468d4702b5065e3a25a696f,
+        type: 2}
+    - target: {fileID: 7762916451396610289, guid: 5f0f94deca3ea478fb709d3883897260,
+        type: 3}
+      propertyPath: chests.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 28f8e4256608c694ba98188730f55d29,
         type: 2}
     - target: {fileID: 7762916451396610290, guid: 5f0f94deca3ea478fb709d3883897260,
         type: 3}

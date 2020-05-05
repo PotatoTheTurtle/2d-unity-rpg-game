@@ -17,6 +17,22 @@ public class Door : Interactable
     public Inventory playerInventory;
     public SpriteRenderer doorSprite;
     public BoxCollider2D physicsCollider;
+    public BoolValue doorOpened;
+
+    private void Start()
+    {   
+        if(thisDoorType == DoorType.key)
+        {
+            if (doorOpened.RuntimeValue)
+            {
+                Open();
+            }
+            else
+            {
+                Close();
+            }
+        }
+    }
 
     private void Update()
     {
@@ -37,6 +53,10 @@ public class Door : Interactable
     {
         doorSprite.enabled = false;
         open = true;
+        if (thisDoorType == DoorType.key)
+        {
+            doorOpened.RuntimeValue = true;
+        }
         physicsCollider.enabled = false;
     }
 

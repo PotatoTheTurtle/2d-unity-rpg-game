@@ -40,12 +40,12 @@ public class InventorySaver : MonoBehaviour
 
     public void SaveScriptables()
     {
-        FileStream file = File.Create(Application.persistentDataPath + "/inventory.inv");
+        /*FileStream file = File.Create(Application.persistentDataPath + "/inventory.inv");
         BinaryFormatter binary = new BinaryFormatter();
         var json = JsonUtility.ToJson(myInventoryObject);
         Debug.Log(myInventoryObject);
         binary.Serialize(file, json);
-        file.Close();
+        file.Close();*/
     }
 
     public void LoadScriptables()
