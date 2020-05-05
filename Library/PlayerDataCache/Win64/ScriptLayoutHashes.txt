@@ -178,6 +178,7 @@ bd543bad7f9f6262f10595aadb130d22 Cinemachine.dll:Cinemachine.CinemachineComposer
 9a65634b0f2713c6c2d2dd4d09159a88 DOTween.dll:DG.Tweening.Core.DOTweenSettings
 73c147fa690fec90448cfeca6beddc45 Assembly-CSharp.dll:.Door
 7f571709c711860ef02318755b2a45fa Assembly-CSharp.dll:.Knockback
+986a17ac5805a738e57a01ac588d974c Assembly-CSharp.dll:.MusicVolume
 1bf4ae589b0ba87aa35b13607e3c03a5 Assembly-CSharp.dll:.DungeonRoom
 694d20920c0e41f567e119f7159a3644 Cinemachine.dll:Cinemachine.CinemachinePath
 6aa6fd3edd014f75a00069173cfdb38f Assembly-CSharp-firstpass.dll:LeoLuz.PlugAndPlayJoystick.AnalogicKnob
@@ -263,6 +264,7 @@ de29e83626a7b4b16ae1ca0b09863ed6 Assembly-CSharp.dll:Tiled2Unity.ObjectLayer
 66b07b9309d500972dca940f93cde57b Assembly-CSharp.dll:.BoundedNPC
 ae17ecf7e3fa55d81a442bbfd5297576 Assembly-CSharp.dll:.VectorValue
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
+de2976790b5f08add61d2411c529467b Assembly-CSharp.dll:.VolumeManager
 bc0eaa8901a57d8e48f26906da1ebeba Assembly-CSharp.dll:.MeleeEnemy
 df434544c9f7b33d1cc7e635b180d279 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3b31aa5115bd3866f2b6a1f4b64234d5 Assembly-CSharp.dll:.TurretEnemy
@@ -281,5 +283,3 @@ ffdbd5802c2482a072a88f428ad3ca9d Cinemachine.dll:Cinemachine.CinemachineBrain
 2792936179724025482dc04d68a47ca7 Cinemachine.dll:Cinemachine.CinemachineClearShot
 7eeb6aac167ac70ac3f4108eb1fc12e8 Assembly-CSharp.dll:.signTry
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.PlayerHit
-de2976790b5f08add61d2411c529467b Assembly-CSharp.dll:.VolumeManager
-986a17ac5805a738e57a01ac588d974c Assembly-CSharp.dll:.MusicVolume

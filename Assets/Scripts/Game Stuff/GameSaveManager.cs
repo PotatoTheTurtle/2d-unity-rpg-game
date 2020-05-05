@@ -100,7 +100,7 @@ public class GameSaveManager : MonoBehaviour
 
     public void SaveScriptables()
     {
-        /*for (int i = 0; i < objects.Count; i ++)
+        for (int i = 0; i < objects.Count; i ++)
         {
             FileStream file = File.Create(Application.persistentDataPath +
                 string.Format("/{0}.dat", i));
@@ -114,7 +114,7 @@ public class GameSaveManager : MonoBehaviour
         BinaryFormatter binaryinventory = new BinaryFormatter();
         var jsoninventory = JsonUtility.ToJson(playerInventory);
         binaryinventory.Serialize(generalinventoryfile, jsoninventory);
-        generalinventoryfile.Close();*/
+        generalinventoryfile.Close();
     }
 
     public void LoadScriptables()
